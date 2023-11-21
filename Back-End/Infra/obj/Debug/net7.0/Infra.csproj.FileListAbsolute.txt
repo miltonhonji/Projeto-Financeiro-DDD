@@ -1,0 +1,22 @@
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\3 - Infraestrutura\Infra\obj\Debug\net7.0\Infra.csproj.AssemblyReference.cache
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\3 - Infraestrutura\Infra\obj\Debug\net7.0\Infra.GeneratedMSBuildEditorConfig.editorconfig
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\3 - Infraestrutura\Infra\obj\Debug\net7.0\Infra.AssemblyInfoInputs.cache
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\3 - Infraestrutura\Infra\obj\Debug\net7.0\Infra.AssemblyInfo.cs
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\3 - Infraestrutura\Infra\obj\Debug\net7.0\Infra.csproj.CoreCompileInputs.cache
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\Infra\obj\Debug\net7.0\Infra.csproj.AssemblyReference.cache
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\Infra\obj\Debug\net7.0\Infra.GeneratedMSBuildEditorConfig.editorconfig
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\Infra\obj\Debug\net7.0\Infra.AssemblyInfoInputs.cache
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\Infra\obj\Debug\net7.0\Infra.AssemblyInfo.cs
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\Infra\obj\Debug\net7.0\Infra.csproj.CoreCompileInputs.cache
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\Infra\bin\Debug\net7.0\Infra.deps.json
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\Infra\bin\Debug\net7.0\Infra.dll
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\Infra\bin\Debug\net7.0\Infra.pdb
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\Infra\bin\Debug\net7.0\Domain.dll
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\Infra\bin\Debug\net7.0\Entities.dll
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\Infra\bin\Debug\net7.0\Entities.pdb
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\Infra\bin\Debug\net7.0\Domain.pdb
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\Infra\obj\Debug\net7.0\Infra.csproj.CopyComplete
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\Infra\obj\Debug\net7.0\Infra.dll
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\Infra\obj\Debug\net7.0\refint\Infra.dll
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\Infra\obj\Debug\net7.0\Infra.pdb
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\Infra\obj\Debug\net7.0\ref\Infra.dll

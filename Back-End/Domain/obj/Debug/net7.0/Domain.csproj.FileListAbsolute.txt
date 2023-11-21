@@ -1,0 +1,27 @@
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\2 - Domínio\Domain\bin\Debug\net7.0\Domain.deps.json
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\2 - Domínio\Domain\bin\Debug\net7.0\Domain.dll
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\2 - Domínio\Domain\bin\Debug\net7.0\Domain.pdb
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\2 - Domínio\Domain\obj\Debug\net7.0\Domain.csproj.AssemblyReference.cache
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\2 - Domínio\Domain\obj\Debug\net7.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\2 - Domínio\Domain\obj\Debug\net7.0\Domain.AssemblyInfoInputs.cache
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\2 - Domínio\Domain\obj\Debug\net7.0\Domain.AssemblyInfo.cs
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\2 - Domínio\Domain\obj\Debug\net7.0\Domain.csproj.CoreCompileInputs.cache
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\2 - Domínio\Domain\obj\Debug\net7.0\Domain.dll
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\2 - Domínio\Domain\obj\Debug\net7.0\refint\Domain.dll
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\2 - Domínio\Domain\obj\Debug\net7.0\Domain.pdb
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\2 - Domínio\Domain\obj\Debug\net7.0\ref\Domain.dll
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\Domain\bin\Debug\net7.0\Domain.deps.json
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\Domain\bin\Debug\net7.0\Domain.dll
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\Domain\bin\Debug\net7.0\Domain.pdb
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\Domain\obj\Debug\net7.0\Domain.csproj.AssemblyReference.cache
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\Domain\obj\Debug\net7.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\Domain\obj\Debug\net7.0\Domain.AssemblyInfoInputs.cache
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\Domain\obj\Debug\net7.0\Domain.AssemblyInfo.cs
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\Domain\obj\Debug\net7.0\Domain.csproj.CoreCompileInputs.cache
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\Domain\obj\Debug\net7.0\Domain.dll
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\Domain\obj\Debug\net7.0\refint\Domain.dll
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\Domain\obj\Debug\net7.0\Domain.pdb
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\Domain\obj\Debug\net7.0\ref\Domain.dll
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\Domain\bin\Debug\net7.0\Entities.dll
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\Domain\bin\Debug\net7.0\Entities.pdb
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\Domain\obj\Debug\net7.0\Domain.csproj.CopyComplete

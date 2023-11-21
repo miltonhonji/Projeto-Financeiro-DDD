@@ -1,0 +1,28 @@
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\4 - Entidades\Entities\obj\Debug\net7.0\Entities.csproj.AssemblyReference.cache
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\4 - Entidades\Entities\obj\Debug\net7.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\4 - Entidades\Entities\obj\Debug\net7.0\Entities.AssemblyInfoInputs.cache
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\4 - Entidades\Entities\obj\Debug\net7.0\Entities.AssemblyInfo.cs
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\4 - Entidades\Entities\obj\Debug\net7.0\Entities.csproj.CoreCompileInputs.cache
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\4 - Entidades\Entities\bin\Debug\net7.0\Entities.deps.json
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\4 - Entidades\Entities\bin\Debug\net7.0\Entities.runtimeconfig.json
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\4 - Entidades\Entities\bin\Debug\net7.0\Entities.dll
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\4 - Entidades\Entities\bin\Debug\net7.0\Entities.pdb
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\4 - Entidades\Entities\obj\Debug\net7.0\Entities.dll
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\4 - Entidades\Entities\obj\Debug\net7.0\refint\Entities.dll
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\4 - Entidades\Entities\obj\Debug\net7.0\Entities.pdb
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\4 - Entidades\Entities\obj\Debug\net7.0\Entities.genruntimeconfig.cache
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\4 - Entidades\Entities\obj\Debug\net7.0\ref\Entities.dll
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\Entities\bin\Debug\net7.0\Entities.deps.json
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\Entities\bin\Debug\net7.0\Entities.runtimeconfig.json
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\Entities\bin\Debug\net7.0\Entities.dll
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\Entities\bin\Debug\net7.0\Entities.pdb
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\Entities\obj\Debug\net7.0\Entities.csproj.AssemblyReference.cache
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\Entities\obj\Debug\net7.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\Entities\obj\Debug\net7.0\Entities.AssemblyInfoInputs.cache
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\Entities\obj\Debug\net7.0\Entities.AssemblyInfo.cs
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\Entities\obj\Debug\net7.0\Entities.csproj.CoreCompileInputs.cache
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\Entities\obj\Debug\net7.0\Entities.dll
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\Entities\obj\Debug\net7.0\refint\Entities.dll
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\Entities\obj\Debug\net7.0\Entities.pdb
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\Entities\obj\Debug\net7.0\Entities.genruntimeconfig.cache
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\Entities\obj\Debug\net7.0\ref\Entities.dll
