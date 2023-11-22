@@ -12,19 +12,38 @@ namespace Infra.Repositório
 {
     public class RepositorioDespesa : RepositoryGenerics<Despesa>, InterfaceDespesa
     {
-        //11: 21 - Aula 6
-        /*public RepositorioDespesa(Parameters)
+        private readonly DbContextOptions<ContextBase> _OptionBuilder;
+    
+        public RepositorioDespesa()
         {
-            
-        }*/
-        public Task<IList<Despesa>> ListarDespesasUsuario(string emailUsuario)
+            _OptionBuilder = new DbContextOptions<ContextBase>();
+        }
+        public async Task<IList<Despesa>> ListarDespesasUsuario(string emailUsuario)
         {
-            throw new NotImplementedException();
+            using(var banco = new ContextBase(_OptionBuilder))
+            {
+                return await
+                (from s in banco.SistemaFinanceiro
+                 join c in banco.Categoria on s.Id equals c.IdSistema
+                 join us in banco.UsuarioSistemaFinanceiro on s.Id equals us.IdSistema
+                 join d in banco.Despesa on c.Id equals d.IdCategoria
+                 where us.EmailUsuario.Equals(emailUsuario) && s.Mes == d.Mes && s.Ano == d.Ano
+                 select c).AsNoTracking().ToListAsync();
+            }
         }
 
-        public Task<IList<Despesa>> ListarDespesasUsuarioNaoPagasMesesAnterior(string emailUsuario)
+        public async Task<IList<Despesa>> ListarDespesasUsuarioNaoPagasMesesAnterior(string emailUsuario)
         {
-            throw new NotImplementedException();
+            using(var banco = new ContextBase(_OptionBuilder))
+            {
+                return await
+                (from s in banco.SistemaFinanceiro
+                 join c in banco.Categoria on s.Id equals c.IdSistema
+                 join us in banco.UsuarioSistemaFinanceiro on s.Id equals us.IdSistema
+                 join d in banco.Despesa on c.Id equals d.IdCategoria
+                 where us.EmailUsuario.Equals(emailUsuario) && d.Mes < DateTime.Now.Month && !d.Pago 
+                 select d).AsNoTracking().ToListAsync();
+            }
         }
     }
 }
