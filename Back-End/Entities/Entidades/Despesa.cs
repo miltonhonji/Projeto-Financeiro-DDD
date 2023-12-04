@@ -19,9 +19,13 @@ namespace Entities.Entidades
         public DateTime DataCadastro { get; set; }
         public DateTime DataAlteracao { get; set; }	
         public DateTime DataPagamento { get; set; }
-        public DateTime DataVencimaneto { get; set; }
+        public DateTime DataVencimento { get; set; }
         public bool Pago { get; set; }
         public bool DespesaAtrasa { get; set;}
 
+        [ForeignKey("Categoria")]
+        [Column(Order = 1)]
+        public int IdCategoria { get; set; }
+        //public virtual Categoria Categoria { get; set; }
     }
 }

@@ -11,11 +11,15 @@ namespace Infra.Configuração
 {
     public class ContextBase : IdentityDbContext<ApplicationUser>
     {
-        public ContextBase(DbContextOptions options) : base(options)
+        public ContextBase()
+        {
+            
+        }
+        public ContextBase( DbContextOptions options ) : base( options )
         {
         }
 
-        public DbSet<SistemaFinanceiro> SistemaFinanceiros { set; get; }
+        public DbSet<SistemaFinanceiro> SistemaFinanceiro { set; get; }
         public DbSet<UsuarioSistemaFinanceiro> UsuarioSistemaFinanceiro { set; get; }
         public DbSet<Categoria> Categoria { set; get; }
         public DbSet<Despesa> Despesa { set; get; }

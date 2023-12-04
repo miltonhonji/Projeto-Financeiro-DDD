@@ -122,3 +122,7 @@ C:\DevMilton\Projeto-Financeiro-DDD\Back-End\WebApi\obj\Debug\net7.0\scopedcss\b
 C:\DevMilton\Projeto-Financeiro-DDD\Back-End\WebApi\obj\Debug\net7.0\WebApi.csproj.CopyComplete
 C:\DevMilton\Projeto-Financeiro-DDD\Back-End\WebApi\obj\Debug\net7.0\WebApi.genruntimeconfig.cache
 C:\DevMilton\Projeto-Financeiro-DDD\Back-End\WebApi\obj\Debug\net7.0\ref\WebApi.dll
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\WebApi\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\WebApi\bin\Debug\net7.0\Microsoft.AspNetCore.Authorization.dll
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\WebApi\bin\Debug\net7.0\Microsoft.AspNetCore.Metadata.dll
+C:\DevMilton\Projeto-Financeiro-DDD\Back-End\WebApi\bin\Debug\net7.0\Microsoft.Extensions.Logging.Abstractions.dll

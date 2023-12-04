@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "C:\\DevMilton\\Projeto-Financeiro-DDD\\Back-End\\WebApI\\WebApi.csproj": {}
+    "C:\\DevMilton\\Projeto-Financeiro-DDD\\Back-End\\WebApi\\WebApi.csproj": {}
   },
   "projects": {
     "C:\\DevMilton\\Projeto-Financeiro-DDD\\Back-End\\Domain\\Domain.csproj": {
@@ -198,6 +198,12 @@
               "target": "Package",
               "version": "[7.0.14, )"
             },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.14, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[7.0.14, )"
@@ -223,14 +229,14 @@
         }
       }
     },
-    "C:\\DevMilton\\Projeto-Financeiro-DDD\\Back-End\\WebApI\\WebApi.csproj": {
+    "C:\\DevMilton\\Projeto-Financeiro-DDD\\Back-End\\WebApi\\WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\DevMilton\\Projeto-Financeiro-DDD\\Back-End\\WebApI\\WebApi.csproj",
+        "projectUniqueName": "C:\\DevMilton\\Projeto-Financeiro-DDD\\Back-End\\WebApi\\WebApi.csproj",
         "projectName": "WebApi",
-        "projectPath": "C:\\DevMilton\\Projeto-Financeiro-DDD\\Back-End\\WebApI\\WebApi.csproj",
+        "projectPath": "C:\\DevMilton\\Projeto-Financeiro-DDD\\Back-End\\WebApi\\WebApi.csproj",
         "packagesPath": "C:\\Users\\facto\\.nuget\\packages\\",
-        "outputPath": "C:\\DevMilton\\Projeto-Financeiro-DDD\\Back-End\\WebApI\\obj\\",
+        "outputPath": "C:\\DevMilton\\Projeto-Financeiro-DDD\\Back-End\\WebApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -273,6 +279,14 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[7.0.14, )"
+            },
+            "Microsoft.AspNetCore.Authorization": {
+              "target": "Package",
+              "version": "[7.0.14, )"
+            },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
               "version": "[7.0.14, )"
@@ -299,9 +313,25 @@
               "target": "Package",
               "version": "[7.0.14, )"
             },
+            "Microsoft.IdentityModel.JsonWebTokens": {
+              "target": "Package",
+              "version": "[7.0.3, )"
+            },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[7.0.3, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.5.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[7.0.3, )"
+            },
+            "System.Security.Claims": {
+              "target": "Package",
+              "version": "[4.3.0, )"
             }
           },
           "imports": [

@@ -1,6 +1,8 @@
 using Domain.Interfaces.ISistemaFinanceiro;
 using Entities.Entidades;
+using Infra.Configuração;
 using Infra.Repositório.Generics;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;

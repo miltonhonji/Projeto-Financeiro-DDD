@@ -1,6 +1,8 @@
 using Domain.Interfaces.IUsuarioSistemaFinanceiro;
 using Entities.Entidades;
+using Infra.Configuração;
 using Infra.Repositório.Generics;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -45,7 +47,7 @@ namespace Infra.Repositório
             using(var banco = new ContextBase(_OptionsBuilder))
             {
                  banco.UsuarioSistemaFinanceiro
-                 .RemoveRanges(usuarios);
+                 .RemoveRange(usuarios);
 
                  await banco.SaveChangesAsync();
             }

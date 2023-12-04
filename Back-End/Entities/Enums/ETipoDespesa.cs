@@ -9,6 +9,6 @@ namespace Entities.Enums
     public enum ETipoDespesa
     {
         Contas = 1,
-        Investimeto = 2
+        Investimento = 2
     }
 }
