@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { LoginService } from '../../services/login.service';
 
 @Component({
   selector: 'app-login',
@@ -9,14 +10,17 @@ import { Router } from '@angular/router';
   styleUrl: './login.component.scss'
 })
 export class LoginComponent {
+
   constructor(public formBuilder: FormBuilder,
-    private router: Router){
+    private router: Router,
+    private loginService: LoginService){
 
   }
 
   loginForm: FormGroup;
 
-  ngOnInit():void{
+  ngOnInit(): void {
+
     this.loginForm = this.formBuilder.group
     (
       {
@@ -26,11 +30,20 @@ export class LoginComponent {
     )
   }
 
-  get dadosForm(){
+  get dadosForm() {
     return this, this.loginForm.controls;
   }
 
   loginUser(){
-    alert("OK")
+
+    this.loginService.login(this.dadosForm["email"].value, this.dadosForm["senha"].value).subscribe(
+      token => {
+        alert(token);
+        this.router.navigate(['/dashboard']);
+      },
+      err => {
+        alert('Ocorreu um erro');
+      }
+    )
   }
 }
