@@ -2,16 +2,16 @@ import { Component } from '@angular/core';
 import { MenuService } from '../../services/menu.service';
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrl: './dashboard.component.scss'
+  selector: 'app-despesa',
+  templateUrl: './despesa.component.html',
+  styleUrl: './despesa.component.scss'
 })
-export class DashboardComponent {
+export class DespesaComponent {
 
   constructor(public menuService: MenuService){
   }
 
   ngOnInit(){
-    this.menuService.menuSelecionado = 1;
+    this.menuService.menuSelecionado = 4;
   }
 }

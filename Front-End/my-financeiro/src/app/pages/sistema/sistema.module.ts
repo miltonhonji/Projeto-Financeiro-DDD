@@ -1,21 +1,21 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
-import { DashboardComponent } from "./dashboard.component";
-import { DashboardRoutingModule } from "./dashboard-routing.module";
+import { SistemaComponent } from "./sistema.component";
+import { SistemaRoutingModule } from "./sistema-routing.module";
 import { NavbarModule } from "../../components/navbar/navbar.module";
 import { SidebarModule } from "../../components/sidebar/sidebar.module";
 
 @NgModule(
   {
       providers:[],
-      declarations:[DashboardComponent],
+      declarations:[SistemaComponent],
       imports:[
           CommonModule,
-          DashboardRoutingModule,
+          SistemaRoutingModule,
           NavbarModule,
           SidebarModule
       ]
   }
 )
 
-export class DashboardModule{}
+export class SistemaModule{}
