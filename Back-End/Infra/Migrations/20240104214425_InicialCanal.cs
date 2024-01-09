@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Infra.Migrations
 {
     /// <inheritdoc />
-    public partial class Inicial_Canal : Migration
+    public partial class InicialCanal : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -49,6 +49,44 @@ namespace Infra.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_AspNetUsers", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Categoria",
+                columns: table => new
+                {
+                    IdSistema = table.Column<int>(type: "int", nullable: false),
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Nome = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Categoria", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Despesa",
+                columns: table => new
+                {
+                    IdCategoria = table.Column<int>(type: "int", nullable: false),
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Valor = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    Mes = table.Column<int>(type: "int", nullable: false),
+                    Ano = table.Column<int>(type: "int", nullable: false),
+                    TipoDespesa = table.Column<int>(type: "int", nullable: false),
+                    DataCadastro = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    DataAlteracao = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    DataPagamento = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    DataVencimento = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Pago = table.Column<bool>(type: "bit", nullable: false),
+                    DespesaAtrasada = table.Column<bool>(type: "bit", nullable: false),
+                    Nome = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Despesa", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -177,26 +215,6 @@ namespace Infra.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Categoria",
-                columns: table => new
-                {
-                    IdSistema = table.Column<int>(type: "int", nullable: false),
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Nome = table.Column<string>(type: "nvarchar(max)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Categoria", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Categoria_SistemaFinanceiro_IdSistema",
-                        column: x => x.IdSistema,
-                        principalTable: "SistemaFinanceiro",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "UsuarioSistemaFinanceiro",
                 columns: table => new
                 {
@@ -214,36 +232,6 @@ namespace Infra.Migrations
                         name: "FK_UsuarioSistemaFinanceiro_SistemaFinanceiro_IdSistema",
                         column: x => x.IdSistema,
                         principalTable: "SistemaFinanceiro",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Despesa",
-                columns: table => new
-                {
-                    IdCategoria = table.Column<int>(type: "int", nullable: false),
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Valor = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    Mes = table.Column<int>(type: "int", nullable: false),
-                    Ano = table.Column<int>(type: "int", nullable: false),
-                    TipoDespesa = table.Column<int>(type: "int", nullable: false),
-                    DataCadastro = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    DataAlteracao = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    DataPagamento = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    DataVencimento = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Pago = table.Column<bool>(type: "bit", nullable: false),
-                    DespesaAtrasa = table.Column<bool>(type: "bit", nullable: false),
-                    Nome = table.Column<string>(type: "nvarchar(max)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Despesa", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Despesa_Categoria_IdCategoria",
-                        column: x => x.IdCategoria,
-                        principalTable: "Categoria",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -288,16 +276,6 @@ namespace Infra.Migrations
                 filter: "[NormalizedUserName] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Categoria_IdSistema",
-                table: "Categoria",
-                column: "IdSistema");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Despesa_IdCategoria",
-                table: "Despesa",
-                column: "IdCategoria");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_UsuarioSistemaFinanceiro_IdSistema",
                 table: "UsuarioSistemaFinanceiro",
                 column: "IdSistema");
@@ -322,6 +300,9 @@ namespace Infra.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
+                name: "Categoria");
+
+            migrationBuilder.DropTable(
                 name: "Despesa");
 
             migrationBuilder.DropTable(
@@ -332,9 +313,6 @@ namespace Infra.Migrations
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");
-
-            migrationBuilder.DropTable(
-                name: "Categoria");
 
             migrationBuilder.DropTable(
                 name: "SistemaFinanceiro");

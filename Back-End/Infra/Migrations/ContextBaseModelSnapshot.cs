@@ -110,8 +110,6 @@ namespace Infra.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("IdSistema");
-
                     b.ToTable("Categoria");
                 });
 
@@ -138,7 +136,7 @@ namespace Infra.Migrations
                     b.Property<DateTime>("DataVencimento")
                         .HasColumnType("datetime2");
 
-                    b.Property<bool>("DespesaAtrasa")
+                    b.Property<bool>("DespesaAtrasada")
                         .HasColumnType("bit");
 
                     b.Property<int>("IdCategoria")
@@ -162,8 +160,6 @@ namespace Infra.Migrations
                         .HasColumnType("decimal(18,2)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("IdCategoria");
 
                     b.ToTable("Despesa");
                 });
@@ -363,28 +359,6 @@ namespace Infra.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens", (string)null);
-                });
-
-            modelBuilder.Entity("Entities.Entidades.Categoria", b =>
-                {
-                    b.HasOne("Entities.Entidades.SistemaFinanceiro", "SistemaFinanceiro")
-                        .WithMany()
-                        .HasForeignKey("IdSistema")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("SistemaFinanceiro");
-                });
-
-            modelBuilder.Entity("Entities.Entidades.Despesa", b =>
-                {
-                    b.HasOne("Entities.Entidades.Categoria", "Categoria")
-                        .WithMany()
-                        .HasForeignKey("IdCategoria")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Categoria");
                 });
 
             modelBuilder.Entity("Entities.Entidades.UsuarioSistemaFinanceiro", b =>

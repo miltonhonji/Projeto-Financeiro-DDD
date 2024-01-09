@@ -10,15 +10,16 @@
             </div>
         </div>
 
-        <form class="form-page" [formGroup]="sistemaForm" (submit)="enviar()" >
+        <form class="form-page" [formGroup]="sistemaForm" (submit)="enviar()">
 
             <div class="row">
                 <div class="group-row">
                     <label>Sistema</label>
-                    <input type="text" name="name" id="name" placeholder="Nome" formControlName="name" required/>
+                    <input type="text" name="name" id="name" placeholder="Nome" formControlName="name" required />
                     <label class="error-input" *ngIf="sistemaForm.get('name')?.errors?.['required'] &&
                     sistemaForm.get('name')?.touched">
-                      Campo Obrigatório!</label>
+                      Campo Obrigatório!
+                    </label>
                 </div>
             </div>
 
@@ -26,7 +27,7 @@
               <div class="group-row">
                   <input type="submit" value="Salvar" class="btn-primary"/>
               </div>
-          </div>
+            </div>
 
         </form>
 

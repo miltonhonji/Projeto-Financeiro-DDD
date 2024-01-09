@@ -4,7 +4,7 @@ import {
   HttpHandler,
   HttpInterceptor,
   HttpRequest,
-  HttpHeaders, 
+  HttpHeaders,
 } from "@angular/common/http";
 import { Router } from "@angular/router";
 import { BehaviorSubject, Observable, throwError } from "rxjs";
@@ -35,7 +35,7 @@ export class HTTPStatus
 export class LoaderInterceptor implements HttpInterceptor{
     private _requests = 0;
 
-    constructor(        
+    constructor(
         private spinner: NgxSpinnerService,
         private status: HTTPStatus,
         private authService: AuthService,
@@ -64,7 +64,7 @@ export class LoaderInterceptor implements HttpInterceptor{
         headers = new HttpHeaders()
           .append("accept", "application/json")
           .append("Content-Type", "application/json")
-          .append("Authorization", "Bearer" + this.authService.getToken);
+          .append("Authorization", "Bearer " + this.authService.getToken);
       }
 
       let request = req.clone({ headers });
@@ -89,6 +89,6 @@ export class LoaderInterceptor implements HttpInterceptor{
             this.spinner.hide();
         });
       })
-    );     
+    );
   }
 }

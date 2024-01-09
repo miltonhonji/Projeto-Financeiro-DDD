@@ -13,4 +13,8 @@ export class Despesa
     Pago: boolean;
     DespesaAtrasa: boolean;
     IdCategoria: number;
+
+    nomePropriedade:string="";
+    mensagem:string="";
+    notificacoes:[];
 }

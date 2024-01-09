@@ -21,7 +21,7 @@ namespace Entities.Entidades
         public DateTime DataPagamento { get; set; }
         public DateTime DataVencimento { get; set; }
         public bool Pago { get; set; }
-        public bool DespesaAtrasa { get; set;}
+        public bool DespesaAtrasada { get; set;}
 
         [ForeignKey("Categoria")]
         [Column(Order = 1)]

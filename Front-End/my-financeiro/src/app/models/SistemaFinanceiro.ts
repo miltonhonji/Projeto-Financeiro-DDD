@@ -1,10 +1,14 @@
 export class SistemaFinanceiro {
-  Id: number;
-  Nome: string;
-  Mes: number;
-  Ano: number;
-  DiaFechamento: number;
-  GerarCopiaDespesa: boolean;
-  MesCopia: number;
-  AnoCopia: number;
+  id: number;
+  nome: string;
+  mes: number;
+  ano: number;
+  diaFechamento: number;
+  gerarCopiaDespesa: boolean;
+  mesCopia: number;
+  anoCopia: number;
+
+  nomePropriedade:string="";
+  mensagem:string="";
+  notificacoes:[];
 }

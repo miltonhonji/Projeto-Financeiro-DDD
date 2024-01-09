@@ -56,14 +56,14 @@ namespace WebApi.Controllers
             return Task.FromResult(true);
         }
 
-        [HttpGet("/api/DeleteUsuarioNoSistema")]
+        [HttpDelete("/api/DeleteUsuarioNoSistema")]
         [Produces("application/json")]
         public async Task<object> DeleteUsuarioNoSistema(int id)
         {
             try
             {
                 var usuarioSistemaFinanceiro = await _InterfaceUsuarioSistemaFinanceiro.GetEntityById(id);
-                return _InterfaceUsuarioSistemaFinanceiro.Delete(usuarioSistemaFinanceiro);
+                await _InterfaceUsuarioSistemaFinanceiro.Delete(usuarioSistemaFinanceiro);
             }
             catch (Exception)
             {             
