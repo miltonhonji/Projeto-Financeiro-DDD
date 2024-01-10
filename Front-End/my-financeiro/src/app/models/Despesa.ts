@@ -1,18 +1,18 @@
 export class Despesa
 {
-    Id: number;
-    Nome: string;
-    Valor: number;
-    Mes: number;
-    Ano: number;
-    TipoDespesa: number;
-    DataCadastro: Date;
-    DataAlteracao: Date;
-    DataPagamento: Date;
-    DataVencimento: Date;
-    Pago: boolean;
-    DespesaAtrasa: boolean;
-    IdCategoria: number;
+    id: number;
+    nome: string;
+    valor: number;
+    mes: number;
+    ano: number;
+    tipoDespesa: number;
+    dataCadastro: Date;
+    dataAlteracao: Date;
+    dataPagamento: Date;
+    dataVencimento: Date;
+    pago: boolean;
+    despesaAtrasa: boolean;
+    idCategoria: number;
 
     nomePropriedade:string="";
     mensagem:string="";
