@@ -6,5 +6,5 @@ export class Categoria
 
     nomePropriedade:string="";
     mensagem:string="";
-    notificacoes:[];
+    notificacoes:[]=[];
 }

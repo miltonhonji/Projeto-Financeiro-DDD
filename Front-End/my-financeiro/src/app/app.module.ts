@@ -11,6 +11,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { HTTPStatus, LoaderInterceptor } from './interceptor/loader.interceptor';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { AuthGuard } from './pages/guards/auth-guard.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 const RxJS = [LoaderInterceptor, HTTPStatus];
 
@@ -29,6 +30,7 @@ const RxJS = [LoaderInterceptor, HTTPStatus];
     FormsModule,
     ReactiveFormsModule,
 
+    BrowserAnimationsModule,
     NgxSpinnerModule
   ],
   providers: [

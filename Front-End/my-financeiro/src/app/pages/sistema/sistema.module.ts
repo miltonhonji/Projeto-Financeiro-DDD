@@ -19,6 +19,7 @@ import { MatIconModule } from '@angular/material/icon';
           NavbarModule,
           SidebarModule,
           ReactiveFormsModule,
+
           NgxPaginationModule,
           FormsModule,
           NgSelectModule,

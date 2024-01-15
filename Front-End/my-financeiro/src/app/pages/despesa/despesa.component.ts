@@ -17,6 +17,63 @@ import { Despesa } from '../../models/Despesa';
 })
 export class DespesaComponent {
 
+  tipoTela: number = 1; //1 listagem, 2 cadastro, 3 edição
+  tableListDespesas: Array<Despesa>;
+  id: string;
+
+  page: number = 1;
+  config: any;
+  paginacao: boolean = true;
+  itemsPorPagina: number = 10;
+
+  configpag() {
+    this.id = this.gerarIdParaConfigDePaginacao();
+
+    this.config = {
+      id: this.id,
+      currentPage: this.page,
+      itemsPerPage: this.itemsPorPagina
+    };
+  }
+
+  gerarIdParaConfigDePaginacao(){
+    var result = '';
+    var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    var charactersLength = characters.length;
+    for (var i = 0; i < 10; i++){
+      result += characters.charAt(Math.floor(Math.random() *
+        charactersLength));
+    }
+    return result;
+  }
+
+  cadastro()
+  {
+    this.tipoTela = 2;
+    this.despesaForm.reset();
+  }
+
+  mudarItemsPorPage() {
+    this.page = 1;
+    this.config.currentPage = this.page;
+    this.config.itemsPerPage = this.itemsPorPagina;
+  }
+
+  mudarPage(event: any){
+    this.page = event;
+    this.config.currentPage = this.page;
+  }
+
+  ListarDespesasUsuario(){
+    this.tipoTela = 1;
+
+  this.despesaService.ListarDespesasUsuario(this.authService.getEmailUser())
+    .subscribe((response: Array<Despesa>) => {
+      this.tableListDespesas = response;
+    }, (error) => console.error(error),
+    () => { })
+  }
+
   constructor(public menuService: MenuService, public formBuilder: FormBuilder,
     public sistemaService: SistemaService, public authService: AuthService,
     public categoriaService: CategoriaService,
@@ -37,6 +94,9 @@ despesaForm: FormGroup;
 
 ngOnInit(){
   this.menuService.menuSelecionado = 4;
+
+  this.configpag();
+  this.ListarDespesasUsuario();
 
   this.despesaForm = this.formBuilder.group
     (
@@ -62,7 +122,6 @@ ngOnInit(){
 
     let item = new Despesa();
     item.nome = dados["name"].value;
-    item.id = 0;
     item.valor = dados["valor"].value;
     item.pago = this.checked;
     item.dataVencimento = dados["data"].value;
@@ -72,6 +131,7 @@ ngOnInit(){
     .subscribe((response: Despesa) => {
 
       this.despesaForm.reset();
+      this.ListarDespesasUsuario();
 
     }, (error) => console.error(error),
       () => { })
