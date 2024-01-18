@@ -56,9 +56,9 @@ namespace WebApi.Controllers
             return Task.FromResult(true);
         }
 
-        [HttpDelete("/api/DeleteUsuarioNoSistema")]
+        [HttpDelete("/api/DeleteUsuarioNoSistemaFinanceiro")]
         [Produces("application/json")]
-        public async Task<object> DeleteUsuarioNoSistema(int id)
+        public async Task<object> DeleteUsuarioNoSistemaFinanceiro(int id)
         {
             try
             {

@@ -128,7 +128,7 @@ ngOnInit(){
     {
       let item = new Categoria();
       item.nome = dados["name"].value;
-      item.id =0;
+      item.id = 0;
       item.idSistema = parseInt(this.sistemaSelect.id)
 
       this.categoriaService.AdicionarCategoria(item)

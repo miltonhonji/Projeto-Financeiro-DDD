@@ -117,31 +117,55 @@ ngOnInit(){
   }
 
   enviar(){
-    debugger
+
     var dados = this.dadosForm();
 
-    let item = new Despesa();
-    item.nome = dados["name"].value;
-    item.valor = dados["valor"].value;
-    item.pago = this.checked;
-    item.dataVencimento = dados["data"].value;
+    if(this.itemEdicao) {
 
-    item.idCategoria = parseInt(this.categoriaSelect.id);
-    this.despesaService.AdicionarDespesa(item)
-    .subscribe((response: Despesa) => {
+      this.itemEdicao.nome = dados["name"].value;
+      this.itemEdicao.valor = dados["valor"].value;
+      this.itemEdicao.pago = this.checked;
+      this.itemEdicao.dataVencimento = dados["data"].value;
+      this.itemEdicao.idCategoria = parseInt(this.categoriaSelect.id);
 
-      this.despesaForm.reset();
-      this.ListarDespesasUsuario();
+      this.itemEdicao.nomePropriedade = "";
+      this.itemEdicao.mensagem = "";
+      this.itemEdicao.notificacoes = [];
 
-    }, (error) => console.error(error),
-      () => { })
+      this.despesaService.AtualizarDespesa(this.itemEdicao)
+        .subscribe((response: Despesa) => {
+
+          this.despesaForm.reset();
+          this.ListarDespesasUsuario();
+
+        }, (error) => console.error(error),
+         () => { })
+
+    }
+    else{
+      let item = new Despesa();
+      item.nome = dados["name"].value;
+      item.valor = dados["valor"].value;
+      item.pago = this.checked;
+      item.dataVencimento = dados["data"].value;
+      item.idCategoria = parseInt(this.categoriaSelect.id);
+
+      this.despesaService.AdicionarDespesa(item)
+        .subscribe((response: Despesa) => {
+
+          this.despesaForm.reset();
+          this.ListarDespesasUsuario();
+
+        }, (error) => console.error(error),
+         () => { })
+      }
   }
 
   handleChangePago(item: any){
     this.checked = item.checked as boolean;
   }
 
-  ListarCategoriasUsuario() {
+  ListarCategoriasUsuario(id: number = null) {
     this.categoriaService.ListarCategoriasUsuario(this.authService.getEmailUser())
       .subscribe((response: Array<Categoria>) => {
 
@@ -154,9 +178,50 @@ ngOnInit(){
 
         listSistemaFinanceiro.push(item);
 
+        if(id && id == x.id)
+        {
+          this.categoriaSelect = item;
+        }
+
       });
 
       this.listCategorias = listSistemaFinanceiro;
+
+    })
+  }
+
+  itemEdicao: Despesa;
+
+  edicao(id: number){
+    this.despesaService.ObterDespesa(id)
+    .subscribe((response: Despesa) => {
+
+      if (response){
+          this.itemEdicao = response;
+          this.tipoTela = 2;
+
+          this.ListarCategoriasUsuario(response.idCategoria);
+
+          var dados = this.dadosForm();
+          dados["name"].setValue(this.itemEdicao.nome)
+
+          var dateToString = response.dataVencimento.toString();
+          var dateFull = dateToString.split('-');
+          var dayFull = dateFull[2].split('T');
+          var day = dayFull[0];
+          var month = dateFull[1];
+          var year = dateFull[0];
+
+          var dateInput = year + '-' + month + '-' + day;
+          dados["data"].setValue(dateInput)
+          dados["valor"].setValue(response.valor)
+
+          this.checked = response.pago;
+        }
+
+    },
+    (error) => console.error(error),
+    () => {
 
     })
   }
