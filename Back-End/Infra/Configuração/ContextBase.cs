@@ -42,7 +42,7 @@ namespace Infra.Configuração
 
         public string ObterStringConexao()
         {
-            return @"Data Source=DESKTOP-IQ178NE\FACTORYSOLUTION;Initial Catalog=FINANCEIRO_2023;Integrated Security=False; User ID=sa;Password=Fact2015*;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False";
+            return @"Data Source=NOMEDOSERVIDORSQLSERVER;Initial Catalog=BANCO;Integrated Security=False; User ID=USUARIO;Password=SENHA;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False";
         }
     }
 }
