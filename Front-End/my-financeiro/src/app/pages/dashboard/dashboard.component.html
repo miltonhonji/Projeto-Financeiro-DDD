@@ -8,16 +8,16 @@
           <div class="card">
 
             <div class="title">
-                <div class="card-icon">
+                <div class="card-icon blue">
                 </div>
 
-                <div class="card-categoria">
+                <div class="card-category">
                     Invetimentos
                 </div>
 
                 <h3 class="card-title"> R$
                   <span id="Investimento">
-                      1000
+                      {{objetoGrafico.investimentos}}
                   </span>
                 </h3>
             </div>
@@ -29,6 +29,104 @@
 
           </div>
 
+          <div class="card">
+
+            <div class="title">
+                <div class="card-icon green">
+                </div>
+
+                <div class="card-category">
+                    Despesas Pagas
+                </div>
+
+                <h3 class="card-title"> R$
+                  <span id="Investimento">
+                      {{objetoGrafico.despesas_pagas}}
+                  </span>
+                </h3>
+            </div>
+
+            <div class="card-footer">
+                <div class="arrow"></div>
+                <div class="text-info">Acessar mes</div>
+            </div>
+
+          </div>
+
+          <div class="card">
+
+            <div class="title">
+                <div class="card-icon orange">
+                </div>
+
+                <div class="card-category">
+                    Despesas a Pagar
+                </div>
+
+                <h3 class="card-title"> R$
+                  <span id="Investimento">
+                      {{objetoGrafico.despesas_pendentes}}
+                  </span>
+                </h3>
+            </div>
+
+            <div class="card-footer">
+                <div class="arrow"></div>
+                <div class="text-info">Acessar mes</div>
+            </div>
+
+          </div>
+
         </div>
-    </div>>
+
+        <div class="container-cards">
+          <div class="card">
+
+            <div class="title">
+                <div class="card-icon red">
+                </div>
+
+                <div class="card-category">
+                    Despesas atrasadas
+                </div>
+
+                <h3 class="card-title"> R$
+                  <span id="Investimento">
+                      {{objetoGrafico.despesas_naoPagasMesesAnteriores}}
+                  </span>
+                </h3>
+            </div>
+
+            <div class="card-footer">
+                <div class="arrow"></div>
+                <div class="text-info">Verificar Despesas atrasadas</div>
+            </div>
+
+          </div>
+
+          <div class="card">
+
+            <div class="title">
+                <div class="card-icon red">
+                </div>
+
+                <div class="card-category">
+                    Executar cópia das despesas
+                </div>
+
+                <h3 class="card-title"> R$
+                  <span id="Investimento">
+                      0
+                  </span>
+                </h3>
+            </div>
+
+            <div class="card-footer">
+                <div class="arrow"></div>
+                <div class="text-info">Verificar despesas atrasadas</div>
+            </div>
+
+          </div>
+        </div>
+    </div>
 </div>
