@@ -21,7 +21,7 @@ namespace Infra.Repositório
         }
         public async Task<IList<Despesa>> ListarDespesasUsuario(string emailUsuario)
         {
-            using(var banco = new ContextBase(_OptionsBuilder))
+            using (var banco = new ContextBase(_OptionsBuilder))
             {
                 return await
                    (from s in banco.SistemaFinanceiro
@@ -33,17 +33,17 @@ namespace Infra.Repositório
             }
         }
 
-        public async Task<IList<Despesa>> ListarDespesasUsuarioNaoPagasMesesAnterior(string emailUsuario)
+        public async Task<IList<Despesa>> ListarDespesasUsuarioNaoPagasMesesAnteriores(string emailUsuario)
         {
-            using(var banco = new ContextBase(_OptionsBuilder))
+            using (var banco = new ContextBase(_OptionsBuilder))
             {
                 return await
-                (from s in banco.SistemaFinanceiro
-                 join c in banco.Categoria on s.Id equals c.IdSistema
-                 join us in banco.UsuarioSistemaFinanceiro on s.Id equals us.IdSistema
-                 join d in banco.Despesa on c.Id equals d.IdCategoria
-                 where us.EmailUsuario.Equals(emailUsuario) && d.Mes < DateTime.Now.Month && !d.Pago 
-                 select d).AsNoTracking().ToListAsync();
+                   (from s in banco.SistemaFinanceiro
+                    join c in banco.Categoria on s.Id equals c.IdSistema
+                    join us in banco.UsuarioSistemaFinanceiro on s.Id equals us.IdSistema
+                    join d in banco.Despesa on c.Id equals d.IdCategoria
+                    where us.EmailUsuario.Equals(emailUsuario) && d.Mes < DateTime.Now.Month && !d.Pago
+                    select d).AsNoTracking().ToListAsync();
             }
         }
     }

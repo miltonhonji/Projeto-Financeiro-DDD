@@ -49,16 +49,16 @@ namespace Domain.Serviços
         public async Task<object> CarregaGraficos(string emailUsuario)
         {
             var despesasUsuario = await _InterfaceDespesa.ListarDespesasUsuario(emailUsuario);
-            var despesasAnterior = await _InterfaceDespesa.ListarDespesasUsuarioNaoPagasMesesAnterior(emailUsuario);
-            
-            var depesas_naoPagasMesesAnteriores = despesasAnterior.Any() ?
+            var despesasAnterior = await _InterfaceDespesa.ListarDespesasUsuarioNaoPagasMesesAnteriores(emailUsuario);
+
+            var despesas_naoPagasMesesAnteriores = despesasAnterior.Any() ?
                 despesasAnterior.ToList().Sum(x => x.Valor) : 0;
 
             var despesas_pagas = despesasUsuario.Where(d => d.Pago && d.TipoDespesa == Entities.Enums.ETipoDespesa.Contas)
                 .Sum(x => x.Valor);
-            
+
             var despesas_pendentes = despesasUsuario.Where(d => !d.Pago && d.TipoDespesa == Entities.Enums.ETipoDespesa.Contas)
-            .Sum(x => x.Valor);
+                .Sum(x => x.Valor);
 
             var investimentos = despesasUsuario.Where(d => d.TipoDespesa == Entities.Enums.ETipoDespesa.Investimento)
                 .Sum(x => x.Valor);
@@ -66,11 +66,12 @@ namespace Domain.Serviços
             return new
             {
                 sucesso = "OK",
-                despesas_paga = despesas_pagas,
+                despesas_pagas = despesas_pagas,
                 despesas_pendentes = despesas_pendentes,
-                depesas_naoPagasMesesAnteriores = depesas_naoPagasMesesAnteriores,
+                despesas_naoPagasMesesAnteriores = despesas_naoPagasMesesAnteriores,
                 investimentos = investimentos
             };
+
         }
     }
 }

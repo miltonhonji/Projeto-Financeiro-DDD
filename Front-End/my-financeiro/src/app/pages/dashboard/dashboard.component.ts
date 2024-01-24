@@ -3,6 +3,7 @@ import { MenuService } from '../../services/menu.service';
 import { DespesaService } from '../../services/despesa.service';
 import { AuthService } from '../../services/auth.service';
 import { debug } from 'node:console';
+import { SistemaService } from '../../services/sistema.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -12,7 +13,7 @@ import { debug } from 'node:console';
 export class DashboardComponent {
 
   constructor(public menuService: MenuService, public despesaService: DespesaService,
-    public authService: AuthService){
+    public authService: AuthService, public sistemaService: SistemaService){
   }
 
   ngOnInit(){
@@ -20,17 +21,27 @@ export class DashboardComponent {
     this.CarregaGraficos();
   }
 
-  objetoGrafico:any;
+  objetoGrafico: any;
 
-  CarregaGraficos()
-  {
+  CarregaGraficos() {
       this.despesaService.CarregaGraficos(this.authService.getEmailUser())
       .subscribe((response: any) => {
           debugger
           this.objetoGrafico = response;
       },
       (error) => console.error(error),
-      () => { }
-      )
+      () => {
+
+      }
+    )
+  }
+
+  ExecuteCopiaDespesasSistemaFinanceiro()
+  {
+      this.sistemaService.ExecuteCopiaDespesasSistemaFinanceiro()
+      .subscribe((response:any) => {
+        alert("Executado com sucesso!")
+        this.CarregaGraficos();
+      })
   }
 }
